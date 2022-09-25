@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+    <title>Menu Page</title>
+    <head>
+    <body>
+        <style>
+            .sidenav{
+                margin : 1px 900px 5px 10px;
+                background-color : rgb(8, 137, 193);
+                padding : 15px 5px 15px 5px;
+                position : fixed;
+                font-size: 25px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                height : 300%;
+                width : 190px;
+            }
+
+            .sidenav a:hover{
+                color : gold;
+            }
+
+            p{
+                color : rgb(237, 76, 237);
+                font-size: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .icon{
+                max-width: 20%;
+                max-height: 20%;
+            }
+
+            .body{
+                margin-left : 250px;
+            }
+
+            h1{
+                text-align : center;
+                color : red;
+            }
+
+            .logo{
+                height : 80px;
+                width : 80px;
+            }
+            
+
+        </style>
+
+        <div class = "sidenav">
+            <img class = "logo" src = "https://lh3.googleusercontent.com/p/AF1QipMXYrUrbpBVz1n89-fh-AUZWoQUKssCr0FJLqBf=s1280-p-no-v1" alt = "logo">
+            <br>
+            <hr>
+            <a href = "">Home</a>
+            <hr>
+            <a href = "" class = "active">Menu</a>
+            <hr>
+            <a href = "">My Orders</a>
+            <hr>
+            <a href = "">My Account</a>
+            <hr>
+        </div>
+        <div class = "body">
+            <hr>
+            <h1>American Bakery</h1>
+            <hr>
+        </div>
+    </body>
+    </head>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu Page</title>
+    </head>
+<style>
+     @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+*, ::before, ::after { box-sizing: border-box; }
+body{
+  font-family:'Quicksand', sans-serif;
+  text-align:center;
+  line-height:1.5em;
+/*   background:#E0E4CC; */
+ background: #69d2e7;
+background: -moz-linear-gradient(-45deg, #69d2e7 0%, #a7dbd8 25%, #e0e4cc 46%, #e0e4cc 54%, #f38630 75%, #fa6900 100%);
+background: -webkit-linear-gradient(-45deg, #69d2e7 0%,#a7dbd8 25%,#e0e4cc 46%,#e0e4cc 54%,#f38630 75%,#fa6900 100%);
+background: linear-gradient(135deg, #69d2e7 0%,#a7dbd8 25%,#e0e4cc 46%,#e0e4cc 54%,#f38630 75%,#fa6900 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69d2e7', endColorstr='#fa6900',GradientType=1 );
+}
+hr {
+  border:none;
+  background:#E0E4CC;
+  height:1px;
+/*   width:60%;
+  display:block;
+  margin-left:0; */
+}
+.container {
+  max-width: 860px; 
+  margin: 1em auto; 
+  margin-right: 40px;
+  background:#FFF; 
+  padding:30px;
+  border-radius:5px;
+}
+.productcont {
+  display: flex; 
+}
+.product {
+  padding:1em; 
+  border:1px solid #E0E4CC; 
+  margin-right:1em; 
+  border-radius:5px;
+  margin-bottom: 15px;
+}
+.cart-container {
+  border:1px solid #E0E4CC;
+  border-radius:5px;
+  margin-top:1em;
+  margin-left: 400px;
+  padding:1em;
+}
+button, input[type="submit"] { 
+    border:1px solid #FA6900; 
+    color:#fff; 
+    background: #F38630; 
+    padding:0.6em 1em;
+    font-size:1em; 
+    line-height:1; 
+    border-radius: 1.2em;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+button:hover, button:focus, button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+    background: #A7DBD8;
+    border-color:#69D2E7;
+    color:#000;
+    cursor: pointer;
+}
+table {
+  margin-bottom:1em;
+  border-collapse:collapse;
+}
+table td, table th {
+  text-align : center;
+  padding:0.25em 1em;
+  border-bottom:1px solid #E0E4CC;
+}
+#carttotals {
+  margin-right:0;
+  margin-left:auto;
+}
+.cart-buttons {
+  width:auto;
+  margin-right:0;
+  margin-left:auto;
+  display:flex;
+  justify-content:flex-end;
+  padding:1em 0;
+}
+#emptycart {
+  margin-right:1em;
+}
+table td:nth-last-child(1) {
+  text-align:right;
+}
+.message {
+  border-width: 1px 0px;
+  border-style:solid;
+  border-color:#A7DBD8;
+  color:#679996;
+  padding:0.5em 0;
+  margin:1em 0;
+}
+
+.img{
+    width: 220px;
+    height : 200px;
+}
+</style>
+<body>
+    <div class="container"> 
+        <hr>
+        <h1>Pizzas</h1>
+        <hr>
+        <div id="alerts"></div>
+     <div class="productcont">
+             <div class="product">
+                <img class = "img" src = "https://i0.wp.com/alangulam.online/wp-content/uploads/2021/12/Onion-Pizza-Large-Veg-Mummy-Daddy-Pizza-Corner.jpg?fit=1080%2C1080&ssl=1" alt = "veg Onion Pizza">
+                 <h3 class="productname">Veg Onion Pizza</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹199</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://thumbs.dreamstime.com/z/pizza-margherita-margarita-mozzarella-cheese-tomato-olive-italian-pizza-pizza-margherita-margarita-mozzarella-133884864.jpg" alt = "Veg Margherita Pizza">
+                 <h3 class="productname">Veg Margherita Pizza</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹235</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.tasteandtellblog.com/wp-content/uploads/2021/01/BBQ-Chicken-Pizza-3.jpg" alt = "Butter Chicken Pizza">
+                 <h3 class="productname">Butter Chicken Pizza</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹311</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <div class="productcont">
+             <div class="product">
+                <img class = "img" src = "https://assets.epicurious.com/photos/55ef004bad4e361c200f7554/5:4/w_285,h_228,c_limit/231717.jpg" alt = "Meat Pizza">
+                 <h3 class="productname">Meat Pizza</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹349</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUobEB4DoqGsjMdGp_HT68xB3S3nukTSJhZQ&usqp=CAU" alt = "Cheese Tandoori Pizza">
+                 <h3 class="productname">Cheese Tandoori Pizza</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹299</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://veenaazmanov.com/wp-content/uploads/2020/07/Mushroom-Pizza-with-No-Knead-Pizza-Dough13-500x500.jpg" alt = "Mushroom Pizza">
+                 <h3 class="productname">Mushroom Pizza</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹199</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <hr>
+        <h1>Pastry Cakes</h1>
+        <hr>
+        <div id="alerts"></div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://d3gy1em549lxx2.cloudfront.net/e82b4441-b368-4d50-b6b8-2894641de745.JPG" alt = "BlackForest Cake">
+                 <h3 class="productname">Black Forest Pastry</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹69</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.nandanmsd.com/wp-content/uploads/2020/08/White-Forest-Pastry.png" alt = "White Forest Cake">
+                 <h3 class="productname">White Forest Pastry</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹95</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://bakerbynature.com/wp-content/uploads/2016/11/untitled-17-of-74-3-1.jpg" alt = "redvelvet">
+                 <h3 class="productname">Red Velvet Pastry</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹111</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/r9bkkksd2eqgq60f3dsk" alt = "Choco Truffle">
+                 <h3 class="productname">Choco Truffle</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹80</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bkdahynt7ccxfmjiimjw" alt = "Blueberry">
+                 <h3 class="productname">Blueberry Pastry</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹70</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wb3k3hr8jzffvzgruj7d" alt = "Mousse Pastry">
+                 <h3 class="productname">Mousse Pastry</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹80</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <hr>
+        <h1>Burgers and Sandwiches</h1>
+        <hr>
+        <div id="alerts"></div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://static.toiimg.com/thumb/52532689.cms?imgsize=150611&width=800&height=800" alt = "Veg Burger">
+                 <h3 class="productname">Veg Burger</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹129</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://thescranline.com/wp-content/uploads/2022/02/crispy-chicken-burger-WEB-01.jpg" alt = "Chicken Burger">
+                 <h3 class="productname">Chicken Burger</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹179</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.dhakacakes.com/images/detailed/2/kfc-zinger-burger-combo.jpg" alt = "Combo">
+                 <h3 class="productname">Burger Combo</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹799</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/veg-grilled-sandwich-recipe.jpg" alt = "Veg Sandwich">
+                 <h3 class="productname">Veg Sandwich</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹109</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://rakskitchen.net/wp-content/uploads/2017/03/how-to-make-paneer-sandwich.jpg" alt = "Panner Sandwich">
+                 <h3 class="productname">Panner Sandwich</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹129</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://static.toiimg.com/thumb/84583509.cms?imgsize=240866&width=800&height=800" alt = "Chicken Sandwich">
+                 <h3 class="productname">Chicken Sandwich</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹149</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <hr>
+        <h1>Ice Cream Cakes</h1>
+        <hr>
+        <div id="alerts"></div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://media.bakingo.com/sq-rainbow-surprise-cake0396exot-A_1.jpg" alt = "Rainbow Cake">
+                 <h3 class="productname">Rainbow Cake</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹999</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://bakewithshivesh.com/wp-content/uploads/2021/05/IMG_9384-scaled.jpg" alt = "Black Forest">
+                 <h3 class="productname">Black Forest</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹599</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://theambrosia.com/wp-content/uploads/2021/11/White-Forest.jpg" alt = "White forest">
+                 <h3 class="productname">White Forest</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹699</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://cdn.shopify.com/s/files/1/0521/3929/4884/products/EgglessRedVelvetCake1.jpg?v=1632141306" alt = "Red Velvet">
+                 <h3 class="productname">Red Velvet</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹849</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV00bf7i5TE7j5WMRQO_RsSINe0lyPmz5HeA&usqp=CAU" alt = "Arabian Almond">
+                 <h3 class="productname">Arabian Almond</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹1049</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://4.imimg.com/data4/HC/VE/MY-2/choco-flakes-500x500.jpg" alt = "Choco Delight">
+                 <h3 class="productname">Choco Delight</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹700</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <hr>
+        <h1>Best Sellers</h1>
+        <hr>
+        <div id="alerts"></div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://static.toiimg.com/thumb/58278877.cms?imgsize=1329142&width=800&height=800" alt = "Bread Omlet">
+                 <h3 class="productname">Bread Omlet</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹30</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.licious.in/blog/wp-content/uploads/2020/12/Baked-Chicken-Nuggets-600x600.jpg" alt = "Chicken Naugets">
+                 <h3 class="productname">Chicken Naugets</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹149</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.dinneratthezoo.com/wp-content/uploads/2019/12/homemade-french-fries-5.jpg" alt = "French Fries">
+                 <h3 class="productname">French Fries</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹45</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <hr>
+        <h1>Beverages and Shakes</h1>
+        <hr>
+        <div id="alerts"></div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://www.vegrecipesofindia.com/wp-content/uploads/2015/03/rose-milk-recipe.jpg" alt = "Rose Milk">
+                 <h3 class="productname">Rose Milk</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹60</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.cookwithmanali.com/wp-content/uploads/2014/06/Badam-Milk.jpg" alt = "Badam Milk">
+                 <h3 class="productname">Badham Milk</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹60</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://thesaltymarshmallow.com/wp-content/uploads/2018/08/oreo-milkshakes1.jpg" alt = "Oreo Milkshakes">
+                 <h3 class="productname">Oreo Milkshakes</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹80</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <hr>
+        <h1>Puffs & Bread</h1>
+        <hr>
+        <div id="alerts"></div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://cdn3.foodviva.com/static-content/food-images/snacks-recipes/vegetable-puff/vegetable-puff.jpg" alt = "Veg Puffs">
+                 <h3 class="productname">Veg Puffs</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹20</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "http://www.sanjeevkapoor.com/UploadFiles/RecipeImages/Egg-Puff---SK-Khazana.jpg" alt = "Egg Puff">
+                 <h3 class="productname">Egg Puff</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹25</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.vegrecipesofindia.com/wp-content/uploads/2016/09/mushroom-puffs-recipe-1-500x375.jpg" alt = "Mushroom Puff">
+                 <h3 class="productname">Mushroom Puff</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹25</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+        <div class = "productcont">
+            <div class="product">
+                <img class = "img" src = "https://simply-delicious-food.com/wp-content/uploads/2020/11/Creamy-chicken-puff-pastry-5-1.jpg" alt = "Chicken Puff">
+                 <h3 class="productname">Chicken Puffs</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹30</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://www.veganricha.com/wp-content/uploads/2015/07/100-whole-wheat-bread-9272.jpg" alt = "Wheat Bread">
+                 <h3 class="productname">Wheat Bread</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹70</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+             <div class="product">
+                <img class = "img" src = "https://tmbidigitalassetsazure.blob.core.windows.net/toh/GoogleImagesPostCard/Basic-Homemade-Bread_EXPS_TOHcom20_32480_C01_26_2b.jpg" alt = "Bread">
+                 <h3 class="productname">Bread</h3>
+                 <p>Product description excerpt...</p>
+                 <p class="price">₹50</p>
+                 <button class="addtocart">Add To Cart</button>
+             </div>
+        </div>
+    </div>
+             <div class="cart-container">
+               <h2>Cart</h2>
+               <table>
+                 <thead>
+                   <tr>
+                   <th><strong>Product</strong></th>
+                   <th><strong>Price</strong></th>
+                   <th><strong>Remove Item</strong></th>
+                 </tr>
+                 </thead>
+                 <tbody id="carttable">
+                 </tbody>
+               </table>
+               <hr>
+               <table id="carttotals">
+                 <tr>
+                   <td><strong>Items</strong></td>
+                   <td><strong>Total</strong></td>
+                 </tr>
+                 <tr>
+                   <td>x <span id="itemsquantity">0</span></td>
+                  
+                   <td>₹<span id="total">0</span></td>
+                 </tr></table>
+     
+                 
+               <div class="cart-buttons">  
+                 <button id="emptycart">Empty Cart</button>
+                 <button id="checkout">Checkout</button>
+               </div>
+             </div>
+     </div>
+
+</body>
+<script>
+    /* get cart total from session on load */
+updateCartTotal();
+
+/* button event listeners */
+document.getElementById("emptycart").addEventListener("click", emptyCart);
+var btns = document.getElementsByClassName('addtocart');
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() {addToCart(this);});
+}
+
+/* ADD TO CART functions */
+
+function addToCart(elem) {
+    //init
+    var sibs = [];
+    var getprice;
+    var getproductName;
+    var cart = [];
+     var stringCart;
+    //cycles siblings for product info near the add button
+    while(elem = elem.previousSibling) {
+        if (elem.nodeType === 4) continue; // text node
+        if(elem.className == "price"){
+            getprice = elem.innerText;
+        }
+        if (elem.className == "productname") {
+            getproductName = elem.innerText;
+        }
+        sibs.push(elem);
+    }
+    //create product object
+    var product = {
+        productname : getproductName,
+        price : getprice
+    };
+    //convert product data to JSON for storage
+    var stringProduct = JSON.stringify(product);
+    /*send product data to session storage */
+    
+    if(!sessionStorage.getItem('cart')){
+        //append product JSON object to cart array
+        cart.push(stringProduct);
+        //cart to JSON
+        stringCart = JSON.stringify(cart);
+        //create session storage cart item
+        sessionStorage.setItem('cart', stringCart);
+        addedToCart(getimg);
+        addedToCart(getproductName);
+        updateCartTotal();
+    }
+    else {
+        //get existing cart data from storage and convert back into array
+       cart = JSON.parse(sessionStorage.getItem('cart'));
+        //append new product JSON object
+        cart.push(stringProduct);
+        //cart back to JSON
+        stringCart = JSON.stringify(cart);
+        //overwrite cart data in sessionstorage 
+        sessionStorage.setItem('cart', stringCart);
+        addedToCart(getproductName);
+        updateCartTotal();
+    }
+}
+/* Calculate Cart Total */
+function updateCartTotal(){
+    //init
+    var total = 0;
+    var price = 0;
+    var items = 0;
+    var productname = "";
+    var carttable = "";
+    if(sessionStorage.getItem('cart')) {
+        //get cart data & parse to array
+        var cart = JSON.parse(sessionStorage.getItem('cart'));
+        //get no of items in cart 
+        items = cart.length;
+        //loop over cart array
+        for (var i = 0; i < items; i++){
+            //convert each JSON product in array back into object
+            var x = JSON.parse(cart[i]);
+            //get property value of price
+            price = parseFloat(x.price.split('₹')[1]);
+            productname = x.productname;
+            //add price to total
+            carttable += "<tr><td>" + productname + "</td><td>₹" + price.toFixed(2) + "</td></tr>";
+            total += price;
+        }
+        
+    }
+    //update total on website HTML
+    document.getElementById("total").innerHTML = total.toFixed(2);
+    //insert saved products to cart table
+    document.getElementById("carttable").innerHTML = carttable;
+    //update items in cart on website HTML
+    document.getElementById("itemsquantity").innerHTML = items;
+}
+//user feedback on successful add
+function addedToCart(pname) {
+  var message = pname + " was added to the cart";
+  var alerts = document.getElementById("alerts");
+  alerts.innerHTML = message;
+  if(!alerts.classList.contains("message")){
+     alerts.classList.add("message");
+  }
+}
+/* User Manually empty cart */
+function emptyCart() {
+    //remove cart session storage object & refresh cart totals
+    if(sessionStorage.getItem('cart')){
+        sessionStorage.removeItem('cart');
+        updateCartTotal();
+      //clear message and remove class style
+      var alerts = document.getElementById("alerts");
+      alerts.innerHTML = "";
+      if(alerts.classList.contains("message")){
+          alerts.classList.remove("message");
+      }
+    }
+}
+</script>
+</html>
